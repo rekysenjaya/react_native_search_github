@@ -10,6 +10,7 @@ import {
   Dimensions,
   TextInput
 } from 'react-native';
+import Spinner from 'react-native-loading-spinner-overlay';
 import { connect } from 'react-redux';
 import {
   selectAction, searchAction, clearAction
@@ -45,6 +46,7 @@ export class List extends Component {
     return (
       <View style={{ flex: 1 }} >
         <Header />
+        <Spinner visible={loading} textContent={"Loading..."} textStyle={{color: '#FFF'}} />
         <View style={{ flexDirection: 'row' }} >
           <TextInput style={{ flex: 1 }} placeholder="Search" ref="search" onBlur={(e) => this.handleSearch()} />
           <TouchableOpacity style={{ backgroundColor: '#586069' }}
@@ -54,9 +56,6 @@ export class List extends Component {
             </View>
           </TouchableOpacity>
         </View>
-        {loading &&
-          <Text style={{ fontWeight: '600' }} >Loading...</Text>
-        }
         {!loading &&
           <FlatList
             style={{ flex: 1, margin: 5 }}
