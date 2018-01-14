@@ -1,0 +1,7 @@
+export const SELECTED_DATA = 'SELECTED_DATA';
+export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
+export const SEARCH_REPOSITORI_REQUEST = 'SEARCH_REPOSITORI_REQUEST';
+export const SEARCH_FAILURE = 'SEARCH_FAILURE';
+export const CLEAR = 'CLEAR';
+export const LOADING = 'LOADING';
+
